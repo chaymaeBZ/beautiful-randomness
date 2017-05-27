@@ -11,12 +11,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="employee in employees">
-        <td>{{ employee.name }}</td>
-        <td>{{ employee.email }}</td>
-        <td>{{ employee.manager }}</td>
+      <tr is="employees-row"
+          v-for="employee in employees"
+          :employee="employee">
       </tr>
     </tbody>
   </table>
 
 </div>
+
+<script type="text/xtemplate" id="employee-row">
+
+  <tr>
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.email}}</td>
+    <td>{{ employee.manager }}</td>
+  </tr>
+
+</script>

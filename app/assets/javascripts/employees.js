@@ -18,3 +18,10 @@ var employee = new Vue({
     });
   }
 });
+
+Vue.component('employee-row', {
+  template: '#employee-row',
+  props: {
+    employee: Object;
+  }
+});
